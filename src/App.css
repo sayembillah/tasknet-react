@@ -1,0 +1,34 @@
+/* Animated gradient background for the main app container */
+.background-container {
+  position: relative;
+  min-height: 100vh;
+  min-width: 100vw;
+  /* fallback for browsers that don't support gradients */
+  background: #a18cd1;
+  background: linear-gradient(
+    -45deg,
+    #a18cd1,
+    #fbc2eb,
+    #fad0c4,
+    #fcb69f,
+    #ffdde1,
+    #a1c4fd,
+    #c2e9fb,
+    #fbc2eb
+  );
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  z-index: 0;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
